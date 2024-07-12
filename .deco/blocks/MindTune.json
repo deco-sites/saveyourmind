@@ -1,6 +1,5 @@
 {
   "__resolveType": "site/sections/Theme/Theme.tsx",
-  "colorScheme": "any",
   "buttonStyle": {
     "--border-btn": "1px",
     "--rounded-btn": "0.2rem",
@@ -14,16 +13,15 @@
     "--tab-border": "1px",
     "--tab-radius": "0.5rem"
   },
-  "mode": "light",
   "mainColors": {
     "base-100": "#727efc",
     "primary": "#fdb800",
     "secondary": "#e48bae",
     "tertiary": "#ffffff",
     "neutral": "#000000",
-    "info": "#6264d3",
+    "info": "#d7931d",
     "error": "#ed5a5a",
-    "warning": "#1e0c31",
+    "warning": "#f7f259",
     "success": "#53ee8f"
   },
   "font": {
@@ -33,10 +31,22 @@
         "variations": [
           {
             "weight": "400"
+          },
+          {
+            "weight": "700"
+          },
+          {
+            "weight": "900"
           }
         ],
-        "family": "Playwrite Cuba"
+        "family": "Lato"
       }
     ]
+  },
+  "colorScheme": "any",
+  "mode": "dark",
+  "complementaryColors": {
+    "base-200": "#6264D3",
+    "base-300": "#1E0C31"
   }
 }
