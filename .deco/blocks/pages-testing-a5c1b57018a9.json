@@ -142,6 +142,16 @@
       }
     },
     {
+      "__resolveType": "site/sections/IconWithParagraph.tsx",
+      "text": "Mindfulness for body, mind and spirit",
+      "icon": {
+        "source": "Star",
+        "strokeWidth": 2,
+        "width": 25,
+        "height": 25
+      }
+    },
+    {
       "__resolveType": "site/sections/ImageWithParagraph.tsx",
       "image": {
         "0": "h",
@@ -266,6 +276,7 @@
       },
       "placement": "left",
       "title": "Improve yourself",
+      "description": "By focusing on the present moment and developing self-compassion, individuals can increase self-awareness, positivity and confidence.",
       "tagline": {
         "0": "S",
         "1": "E",
@@ -285,7 +296,6 @@
         "backgroundColor": "#e48bae",
         "textColor": "#ffffff"
       },
-      "description": "By focusing on the present moment and developing self-compassion, individuals can increase self-awareness, positivity and confidence.",
       "cta": []
     },
     {

@@ -69,6 +69,10 @@
   .animated_cloud-2 {
     animation: cloud-animation-2 18.5s ease-in-out infinite;
   }
+
+  .animate-rotate {
+    animation: spin 10s linear infinite;
+  }
 }
 
 @keyframes cloud-animation {
@@ -102,5 +106,11 @@
   100% {
     transform: translateX(300%);
     opacity: 0; /* Fade out to become invisible */
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
   }
 }
