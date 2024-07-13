@@ -564,6 +564,14 @@
       }
     },
     {
+      "__resolveType": "site/sections/PersonalizedSections.tsx",
+      "sections": [
+        {
+          "__resolveType": "site/sections/BlogPosts.tsx"
+        }
+      ]
+    },
+    {
       "__resolveType": "site/sections/Faq.tsx"
     },
     {
