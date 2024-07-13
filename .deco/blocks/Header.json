@@ -1,1 +1,31 @@
-{"__resolveType":"site/sections/Header.tsx","navigation":{"links":[],"buttons":[]}}
+{
+  "__resolveType": "site/sections/Header.tsx",
+  "navigation": {
+    "links": [
+      {
+        "label": "Meditation",
+        "url": "#"
+      },
+      {
+        "label": "Sleep",
+        "url": "#"
+      },
+      {
+        "label": "Stress",
+        "url": "#"
+      },
+      {
+        "label": "Mindfulness",
+        "url": "#"
+      }
+    ],
+    "buttons": [
+      {
+        "id": "#",
+        "href": "#",
+        "text": "Try for free",
+        "outline": true
+      }
+    ]
+  }
+}

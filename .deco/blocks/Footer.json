@@ -1,1 +1,73 @@
-{"__resolveType":"site/sections/Footer.tsx","links":[],"bottomLinks":[],"social":[],"subscribe":{}}
+{
+  "__resolveType": "site/sections/Footer.tsx",
+  "links": [
+    {
+      "items": [
+        {
+          "label": "About MindTune",
+          "href": "#"
+        },
+        {
+          "label": "Community",
+          "href": "#"
+        },
+        {
+          "label": "Carrer",
+          "href": "#"
+        }
+      ],
+      "title": "About us"
+    },
+    {
+      "items": [
+        {
+          "label": "Help",
+          "href": "#"
+        },
+        {
+          "label": "Contact us",
+          "href": "#"
+        },
+        {
+          "label": "Accessibility",
+          "href": "#"
+        }
+      ],
+      "title": "Support"
+    }
+  ],
+  "bottomLinks": [
+    {
+      "label": "Terms",
+      "href": "#"
+    },
+    {
+      "label": "Privacy",
+      "href": "#"
+    }
+  ],
+  "social": [
+    {
+      "network": "Instagram",
+      "href": "#"
+    },
+    {
+      "network": "Facebook",
+      "href": "#"
+    },
+    {
+      "network": "X - Twitter",
+      "href": "#"
+    },
+    {
+      "network": "Youtube",
+      "href": "#"
+    }
+  ],
+  "subscribe": {},
+  "logo": {
+    "src": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11501/0bf98222-7e9d-4f78-9935-c09166a658e6",
+    "alt": "Logo",
+    "width": 140
+  }
+}

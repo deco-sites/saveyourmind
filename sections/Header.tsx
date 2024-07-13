@@ -24,11 +24,7 @@ export interface Nav {
 }
 
 export default function Header({
-  logo = {
-    src:
-      "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1527/67120bcd-936a-4ea5-a760-02ed5c4a3d04",
-    alt: "Logo",
-  },
+  logo,
   navigation = {
     links: [
       { label: "Home", url: "/" },
@@ -49,39 +45,53 @@ export default function Header({
       {/* main content */}
       <div class="drawer-content container lg:px-0 px-4 flex gap-8 items-center justify-between py-4">
         <a href="/">
-          <Image src={logo.src || ""} width={100} height={28} alt={logo.alt} />
+          {logo
+            ? (
+              <Image
+                src={logo.src || ""}
+                width={100}
+                height={28}
+                alt={logo.alt}
+              />
+            )
+            : (
+              <span class="text-xl font-bold text-base-content">
+                SaveYourMind
+              </span>
+            )}
         </a>
 
-        <div class="hidden items-center justify-between lg:flex w-full">
-          <ul class="flex">
-            {navigation.links.map((link) => (
-              <li>
-                <a
-                  href={link.url}
-                  aria-label={link.label}
-                  class="link no-underline hover:underline p-4"
-                >
-                  {link.label}
-                </a>
-              </li>
-            ))}
-          </ul>
-          <ul class="flex gap-3">
-            {navigation.buttons?.map((item) => (
+        <ul class="hidden lg:flex">
+          {navigation.links.map((link) => (
+            <li>
               <a
-                key={item?.id}
-                id={item?.id}
-                href={item?.href ?? "#"}
-                target={item?.href.includes("http") ? "_blank" : "_self"}
-                class={`font-normal btn btn-primary ${
-                  item.outline && "btn-outline"
-                }`}
+                href={link.url}
+                aria-label={link.label}
+                class="link no-underline hover:underline p-4"
               >
-                {item?.text}
+                {link.label}
               </a>
-            ))}
-          </ul>
-        </div>
+            </li>
+          ))}
+        </ul>
+
+        <ul class="hidden lg:flex gap-3">
+          {navigation.buttons?.map((item) => (
+            <a
+              key={item?.id}
+              id={item?.id}
+              href={item?.href ?? "#"}
+              target={item?.href.includes("http") ? "_blank" : "_self"}
+              class={`font-normal btn border-primary !text-base-content ${
+                item.outline
+                  ? "btn-outline hover:bg-transparent rounded-xl border-2 min-w-20"
+                  : "bg-primary"
+              }`}
+            >
+              {item?.text}
+            </a>
+          ))}
+        </ul>
 
         <label
           htmlFor="mobile-drawer-nav"
@@ -102,12 +112,20 @@ export default function Header({
 
         <div class="flex flex-col gap-8 min-h-full w-80 bg-base-100 text-base-content">
           <a class="p-4" href="/">
-            <Image
-              src={logo.src || ""}
-              width={100}
-              height={28}
-              alt={logo.alt}
-            />
+            {logo
+              ? (
+                <Image
+                  src={logo.src || ""}
+                  width={100}
+                  height={28}
+                  alt={logo.alt}
+                />
+              )
+              : (
+                <span class="text-xl font-bold text-base-content">
+                  SaveYourMind
+                </span>
+              )}
           </a>
 
           <ul class="menu">
