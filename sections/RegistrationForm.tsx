@@ -8,9 +8,9 @@ export default function RegistrationForm({ signUpText = "Sign Up" }: Props) {
       <div class="max-w-screen-xl m-0 sm:m-10 bg-white shadow sm:rounded-lg flex justify-center flex-1">
         <div class="lg:w-1/2 xl:w-5/12 p-6 sm:p-12">
           <div class="flex items-center justify-center w-full">
-            <span class="text-2xl font-bold text-secondary text-center">
+            <a href="/" class="text-2xl font-bold text-secondary text-center">
               SaveYourMind
-            </span>
+            </a>
           </div>
           <div class="mt-12 flex flex-col items-center">
             <h1 class="text-2xl xl:text-3xl font-extrabold">
