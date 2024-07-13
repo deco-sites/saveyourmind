@@ -55,21 +55,45 @@ export default function RegistrationForm({ signUpText = "Sign Up" }: Props) {
               </div>
 
               <div class="mx-auto max-w-xs">
-                <input
-                  class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
-                  type="name"
-                  placeholder="Name"
-                />
+                <div class="flex items-center justify-center gap-2">
+                  <input
+                    class="w-1/2 px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
+                    name="name"
+                    type="text"
+                    placeholder="Name"
+                  />
+                  <input
+                    class="w-1/2 px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
+                    name="surname"
+                    type="text"
+                    placeholder="Surname"
+                  />
+                </div>
                 <input
                   class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5"
+                  name="email"
                   type="email"
                   placeholder="Email"
                 />
                 <input
                   class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5"
+                  name="password"
                   type="password"
                   placeholder="Password"
                 />
+
+                <div class="flex flex-col gap-1 mt-5">
+                  <label for="birthdate" class="text-xs text-gray-600">
+                    Your birthdate:
+                  </label>
+
+                  <input
+                    class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
+                    name="birthdate"
+                    type="date"
+                    placeholder="birthdate"
+                  />
+                </div>
                 <button class="mt-5 tracking-wide font-semibold bg-indigo-500 text-gray-100 w-full py-4 rounded-lg hover:bg-indigo-700 transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none">
                   <svg
                     class="w-6 h-6 -ml-2"

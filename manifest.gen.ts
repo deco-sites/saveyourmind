@@ -2,8 +2,10 @@
 // This file SHOULD be checked into source version control.
 // This file is automatically updated during development when running `dev.ts`.
 
+import * as $$$$$$$$$0 from "./actions/user/subscribe.ts";
 import * as $$$$$$$$$$$0 from "./apps/decohub.ts";
 import * as $$$$$$$$$$$1 from "./apps/site.ts";
+import * as $$$0 from "./loaders/user/get-by-email.ts";
 import * as $$$$$$0 from "./sections/BlogPosts.tsx";
 import * as $$$$$$1 from "./sections/Faq.tsx";
 import * as $$$$$$2 from "./sections/Footer.tsx";
@@ -22,6 +24,9 @@ import * as $$$$$$14 from "./sections/Testimonials.tsx";
 import * as $$$$$$15 from "./sections/Theme/Theme.tsx";
 
 const manifest = {
+  "loaders": {
+    "site/loaders/user/get-by-email.ts": $$$0,
+  },
   "sections": {
     "site/sections/BlogPosts.tsx": $$$$$$0,
     "site/sections/Faq.tsx": $$$$$$1,
@@ -39,6 +44,9 @@ const manifest = {
     "site/sections/RegistrationForm.tsx": $$$$$$13,
     "site/sections/Testimonials.tsx": $$$$$$14,
     "site/sections/Theme/Theme.tsx": $$$$$$15,
+  },
+  "actions": {
+    "site/actions/user/subscribe.ts": $$$$$$$$$0,
   },
   "apps": {
     "site/apps/decohub.ts": $$$$$$$$$$$0,
