@@ -10,7 +10,8 @@
     "@preact/signals": "https://esm.sh/*@preact/signals@1.2.2",
     "@preact/signals-core": "https://esm.sh/*@preact/signals-core@1.5.1",
     "std/": "https://deno.land/std@0.190.0/",
-    "daisyui": "npm:daisyui@4.4.19"
+    "daisyui": "npm:daisyui@4.4.19",
+    "bcrypt": "https://deno.land/x/bcrypt@v0.4.1/mod.ts"
   },
   "tasks": {
     "start": "deno task bundle && deno run -A --env --config=deno.json $(deno eval 'console.log(import.meta.resolve(\"deco/hypervisor/main.ts\"))') --build-cmd 'deno task build' -- deno task dev",
