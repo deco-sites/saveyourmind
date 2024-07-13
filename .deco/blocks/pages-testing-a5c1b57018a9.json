@@ -142,6 +142,27 @@
       }
     },
     {
+      "__resolveType": "site/sections/ImageWithParagraph.tsx",
+      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11501/e2db42d3-a3e1-46de-a27b-4795c704f461",
+      "placement": "left",
+      "title": "Improve self",
+      "tagline": "SELF-AWARENESS",
+      "description": "By focusing on the present moment and developing self-compassion, individuals can increase self-awareness, positivity and confidence.",
+      "cta": []
+    },
+    {
+      "__resolveType": "site/sections/ImageWithParagraph.tsx",
+      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11501/6700d729-de05-4c43-ba0e-9c206ca2d48b",
+      "placement": "right",
+      "title": "Be more present",
+      "description": "Lets us engage"
+    },
+    {
+      "__resolveType": "site/sections/ImageWithParagraph.tsx",
+      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11501/985322fd-a56c-4848-a7da-ed96c7af517c",
+      "placement": "left"
+    },
+    {
       "__resolveType": "site/sections/Faq.tsx"
     },
     {
