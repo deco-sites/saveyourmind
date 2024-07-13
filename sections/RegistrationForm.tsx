@@ -1,8 +1,15 @@
+import { useSection } from "deco/hooks/useSection.ts";
+import { AppContext } from "site/apps/site.ts";
+import { User } from "site/actions/user/subscribe.ts";
+
 export interface Props {
   signUpText: string;
+  submissionResponse?: { error?: string };
 }
 
-export default function RegistrationForm({ signUpText = "Sign Up" }: Props) {
+export default function RegistrationForm(
+  { signUpText = "Sign Up", submissionResponse }: Props,
+) {
   return (
     <div class="min-h-screen bg-base-200 text-gray-900 flex justify-center">
       <div class="max-w-screen-xl m-0 sm:m-10 bg-white shadow sm:rounded-lg flex justify-center flex-1">
@@ -54,32 +61,63 @@ export default function RegistrationForm({ signUpText = "Sign Up" }: Props) {
                 </div>
               </div>
 
-              <div class="mx-auto max-w-xs">
+              <form
+                hx-post={useSection()}
+                hx-swap="outerHTML"
+                hx-target="closest section"
+                hx-indicator="#submitButton"
+                class="mx-auto max-w-xs"
+              >
                 <div class="flex items-center justify-center gap-2">
                   <input
                     class="w-1/2 px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
                     name="name"
                     type="text"
                     placeholder="Name"
+                    required
                   />
                   <input
                     class="w-1/2 px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
                     name="surname"
                     type="text"
                     placeholder="Surname"
+                    required
                   />
                 </div>
-                <input
-                  class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5"
-                  name="email"
-                  type="email"
-                  placeholder="Email"
-                />
+
+                <div class="flex flex-col gap-2 mt-5">
+                  <input
+                    class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
+                    name="email"
+                    type="email"
+                    placeholder="Email"
+                    required
+                  />
+                  {submissionResponse?.error && (
+                    <div role="alert" class="alert alert-warning">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="stroke-current shrink-0 h-6 w-6"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
+                        />
+                      </svg>
+                      <span>{submissionResponse?.error}</span>
+                    </div>
+                  )}
+                </div>
                 <input
                   class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5"
                   name="password"
                   type="password"
                   placeholder="Password"
+                  required
                 />
 
                 <div class="flex flex-col gap-1 mt-5">
@@ -92,9 +130,14 @@ export default function RegistrationForm({ signUpText = "Sign Up" }: Props) {
                     name="birthdate"
                     type="date"
                     placeholder="birthdate"
+                    required
                   />
                 </div>
-                <button class="mt-5 tracking-wide font-semibold bg-indigo-500 text-gray-100 w-full py-4 rounded-lg hover:bg-indigo-700 transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none">
+                <button
+                  id="submitButton"
+                  type="submit"
+                  class="mt-5 tracking-wide font-semibold bg-indigo-500 text-gray-100 w-full py-4 rounded-lg hover:bg-indigo-700 transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none"
+                >
                   <svg
                     class="w-6 h-6 -ml-2"
                     fill="none"
@@ -132,7 +175,7 @@ export default function RegistrationForm({ signUpText = "Sign Up" }: Props) {
                     Privacy Policy
                   </a>
                 </p>
-              </div>
+              </form>
             </div>
           </div>
         </div>
@@ -147,3 +190,44 @@ export default function RegistrationForm({ signUpText = "Sign Up" }: Props) {
     </div>
   );
 }
+
+export const loader = async (
+  props: Props,
+  req: Request,
+  { invoke }: AppContext,
+) => {
+  const contentType = req.headers.get("Content-Type");
+
+  if (contentType === "application/x-www-form-urlencoded") {
+    const form = await req.formData();
+
+    const user: User = {
+      birthDate: form.get("birthdate")?.toString() || "",
+      email: form.get("email")?.toString() || "",
+      name: form.get("name")?.toString() || "",
+      surname: form.get("surname")?.toString() || "",
+      password: form.get("password")?.toString() || "",
+      slug: crypto.randomUUID(),
+    };
+
+    const { status } = await invoke.site.actions.user.subscribe({ user });
+
+    if (status == "400") {
+      return {
+        ...props,
+        submissionResponse: { error: "Email already exists" },
+      };
+    }
+
+    if (status == "200") {
+      return {
+        ...props,
+      };
+    }
+  }
+
+  return {
+    ...props,
+    submissionResponse: null,
+  };
+};

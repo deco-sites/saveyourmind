@@ -10,11 +10,15 @@ export interface User {
   birthDate: string;
 }
 
+interface Status {
+  status: "200" | "400";
+}
+
 export default async function action(
   { user }: { user: User },
   _req: Request,
   _ctx: AppContext,
-) {
+): Promise<Status> {
   const hygraph = createGraphqlClient({
     endpoint:
       "https://sa-east-1.cdn.hygraph.com/content/clubpz2af000008l67minhv6u/master",
@@ -31,7 +35,16 @@ export default async function action(
     }
   `;
 
-  const data = await hygraph.query({ query, variables: { user } });
+  try {
+    await hygraph.query({ query, variables: { user } });
 
-  return data;
+    return {
+      status: "200",
+    };
+  } catch (error) {
+    console.log(error);
+    return {
+      status: "400",
+    };
+  }
 }
