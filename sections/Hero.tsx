@@ -5,7 +5,6 @@ export interface CTA {
   id?: string;
   href: string;
   text: string;
-  outline?: boolean;
 }
 
 export interface Props {
@@ -18,52 +17,36 @@ export interface Props {
    * @default This text is fully editable and ready for your personal touch. Just click here, head over to the section window, or dive straight into the code to make changes as you see fit. Whether it's about the content, formatting, font, or anything in between, editing is just a click away.
    */
   description?: string;
-  image?: ImageWidget;
-  placement?: "left" | "right";
-  cta?: CTA[];
+  image?: {
+    source: ImageWidget;
+    width?: number;
+    height?: number;
+    description?: string;
+    preload?: boolean;
+  };
+  cta?: CTA;
 }
-
-const PLACEMENT = {
-  left: "flex-col text-left lg:flex-row-reverse",
-  right: "flex-col text-left lg:flex-row",
-};
 
 export default function HeroFlats({
   title = "Click here to tweak this text however you want.",
-  description =
-    "This text is fully editable and ready for your personal touch. Just click here, head over to the section window, or dive straight into the code to make changes as you see fit. Whether it's about the content, formatting, font, or anything in between, editing is just a click away.",
+  description,
   image,
-  placement = "left",
-  cta = [
-    { id: "change-me-1", href: "/", text: "Change me", outline: false },
-    { id: "change-me-2", href: "/", text: "Change me", outline: true },
-  ],
+  cta,
 }: Props) {
   return (
-    <nav class="lg:container lg:mx-auto mx-4">
-      <div class="flex flex-col items-center gap-8">
+    <nav class="flex items-center justify-center w-full">
+      <div class="flex flex-col items-center gap-8 w-full">
         <div
-          class={`flex w-full xl:container xl:mx-auto py-20 mx-5 md:mx-10 z-10 ${
+          class={`flex w-full py-20 mx-5 md:mx-10 z-10 ${
             image
-              ? PLACEMENT[placement]
+              ? "flex-col text-left"
               : "flex-col items-center justify-center text-center"
-          } lg:py-36 gap-12 md:gap-20 items-center`}
+          } gap-12 items-center`}
         >
-          {image && (
-            <Image
-              width={640}
-              class="w-full lg:w-1/2 object-fit"
-              sizes="(max-width: 640px) 100vw, 30vw"
-              src={image}
-              alt={image}
-              decoding="async"
-              loading="lazy"
-            />
-          )}
           <div
-            class={`mx-6 lg:mx-auto lg:w-full space-y-4 gap-4 ${
+            class={`flex flex-col items-center mx-6 lg:container lg:mx-auto lg:w-full space-y-4 gap-4 ${
               image
-                ? "lg:w-1/2 lg:max-w-xl"
+                ? "w-full lg:max-w-3xl"
                 : "flex flex-col items-center justify-center lg:max-w-3xl"
             }`}
           >
@@ -78,20 +61,55 @@ export default function HeroFlats({
               {description}
             </p>
             <div class="flex items-center gap-3">
-              {cta?.map((item) => (
+              {cta && (
                 <a
-                  key={item?.id}
-                  id={item?.id}
-                  href={item?.href}
-                  target={item?.href.includes("http") ? "_blank" : "_self"}
-                  class={`font-normal btn btn-primary ${
-                    item.outline && "btn-outline"
-                  }`}
+                  key={cta?.id}
+                  id={cta?.id}
+                  href={cta?.href}
+                  class="flex items-center justify-center bg-primary text-neutral w-40 px-6 py-3.5 mx-auto font-bold text-base rounded-full"
                 >
-                  {item?.text}
+                  {cta?.text}
                 </a>
-              ))}
+              )}
             </div>
+          </div>
+
+          <div class="flex items-center justify-center w-full relative overflow-x-hidden">
+            <image
+              src="/cloud_2.png"
+              width={320}
+              height={160}
+              alt="Animated Cloud"
+              class="absolute top-0 animated_cloud"
+            />
+            <image
+              src="/cloud_1.png"
+              width={320}
+              height={160}
+              alt="Second Animated Cloud"
+              class="absolute right-0 bottom-1/2 animated_cloud"
+            />
+            <image
+              src="/cloud_2.png"
+              width={320}
+              height={160}
+              alt="Third Animated Cloud"
+              class="absolute left-0 bottom-0 animated_cloud-2"
+            />
+
+            {image && (
+              <Image
+                width={image.width || 640}
+                height={image.height || 320}
+                class="w-full lg:w-1/2 object-fit z-10"
+                sizes="(max-width: 640px) 100vw, 30vw"
+                src={image.source}
+                alt={image.description}
+                fetchPriority={image.preload ? "high" : "low"}
+                loading={image.preload ? "eager" : "lazy"}
+                preload={image.preload}
+              />
+            )}
           </div>
         </div>
       </div>

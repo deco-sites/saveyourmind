@@ -49,4 +49,46 @@
   .scrollbar-none::-webkit-scrollbar {
     display: none;
   }
+
+  .animated_cloud {
+    animation: cloud-animation 18.5s ease-in-out infinite;
+  }
+
+  .animated_cloud-2 {
+    animation: cloud-animation-2 18.5s ease-in-out infinite;
+  }
+}
+
+@keyframes cloud-animation {
+  0% {
+    transform: translateX(100%);
+    opacity: 0; /* Ensures it is invisible initially */
+  }
+  10% {
+    opacity: 1; /* Fade in to become visible */
+  }
+  95% {
+    opacity: 1; /* Stay visible until near the end */
+  }
+  100% {
+    transform: translateX(-350%);
+    opacity: 0; /* Fade out to become invisible */
+  }
+}
+
+@keyframes cloud-animation-2 {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0; /* Ensures it is invisible initially */
+  }
+  10% {
+    opacity: 1; /* Fade in to become visible */
+  }
+  95% {
+    opacity: 1; /* Stay visible until near the end */
+  }
+  100% {
+    transform: translateX(300%);
+    opacity: 0; /* Fade out to become invisible */
+  }
 }
