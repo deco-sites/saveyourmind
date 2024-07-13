@@ -108,5 +108,17 @@
   "/.deco/blocks/MindTune.json": {
     "blockType": "sections",
     "__resolveType": "site/sections/Theme/Theme.tsx"
+  },
+  "/.deco/blocks/ImageWithParagraph.json": {
+    "blockType": "sections",
+    "__resolveType": "site/sections/ImageWithParagraph.tsx"
+  },
+  "/.deco/blocks/ImageWithParagraph%20-%2002.json": {
+    "blockType": "sections",
+    "__resolveType": "site/sections/ImageWithParagraph.tsx"
+  },
+  "/.deco/blocks/ImageWithParagraph%20-%2003.json": {
+    "blockType": "sections",
+    "__resolveType": "site/sections/ImageWithParagraph.tsx"
   }
 }
