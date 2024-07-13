@@ -130,5 +130,11 @@
     "path": "/sign-up",
     "blockType": "pages",
     "__resolveType": "website/pages/Page.tsx"
+  },
+  "/.deco/blocks/pages-Login-933925.json": {
+    "name": "Login",
+    "path": "/login",
+    "blockType": "pages",
+    "__resolveType": "website/pages/Page.tsx"
   }
 }

@@ -1,10 +1,10 @@
 {
-  "name": "SignUp",
-  "path": "/sign-up",
+  "name": "Login",
+  "path": "/login",
   "sections": [
     {
-      "__resolveType": "site/sections/RegistrationForm.tsx",
-      "signUpText": "Sign Up"
+      "__resolveType": "site/sections/LoginForm.tsx",
+      "signInText": "Log In"
     }
   ],
   "seo": {
