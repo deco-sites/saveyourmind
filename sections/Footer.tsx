@@ -17,12 +17,6 @@ export interface Social {
 }
 
 export interface Props {
-  logo?: {
-    src?: ImageWidget;
-    alt?: string;
-    width?: number;
-    height?: number;
-  };
   links?: Column[];
   madeWith?: {
     label?: string;
@@ -35,11 +29,6 @@ export interface Props {
 }
 
 export default function Footer({
-  logo = {
-    src:
-      "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1527/67120bcd-936a-4ea5-a760-02ed5c4a3d04",
-    alt: "Logo",
-  },
   links = [
     {
       title: "Column One",
@@ -93,13 +82,9 @@ export default function Footer({
         <div class="flex flex-col gap-20 w-full">
           <div class="flex flex-col gap-6 justify-between lg:flex-row w-full">
             <div class="flex flex-col lg:flex-row items-center lg:items-start gap-6 lg:gap-20 w-full">
-              <Image
-                src={logo.src || ""}
-                width={logo.width || 100}
-                height={logo.height || 28}
-                alt={logo.alt}
-                loading="lazy"
-              />
+              <span class="text-xl font-bold text-base-content">
+                SaveYourMind
+              </span>
 
               <div class="flex gap-9">
                 {links?.map((link) => (
