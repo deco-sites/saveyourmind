@@ -1,4 +1,4 @@
-import type { ImageWidget } from "apps/admin/widgets.ts";
+import type { Color, ImageWidget } from "apps/admin/widgets.ts";
 import Image from "apps/website/components/Image.tsx";
 
 export interface CTA {
@@ -8,12 +8,24 @@ export interface CTA {
   style?: "Outline" | "Ghost";
 }
 
+export interface Tagline {
+  text: string;
+  backgroundColor: Color;
+  textColor: Color;
+}
+
 export interface Props {
   title?: string;
   /** @format textarea */
   description?: string;
-  tagline?: string;
-  image?: ImageWidget;
+  tagline?: Tagline;
+  image?: {
+    source: ImageWidget;
+    description: string;
+    width?: number;
+    height?: number;
+    highPriority?: boolean;
+  };
   placement?: "left" | "right";
   cta?: CTA[];
   disableSpacing?: {
@@ -27,21 +39,15 @@ const PLACEMENT = {
   right: "flex-col md:flex-row",
 };
 
-const DEFAULT_IMAGE =
-  "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/4763/772e246e-1959-46ac-a309-3f25ab20af6f";
-
 export default function ImageWithParagraph({
   title = "Here's an intermediate size heading you can edit",
   description =
     "This text is fully editable and ready for your personal touch. Just click here, head over to the section window, or dive straight into the code to make changes as you see fit. Whether it's about the content, formatting, font, or anything in between, editing is just a click away.",
-  tagline = "Tagline",
-  image = DEFAULT_IMAGE,
+  tagline,
+  image,
   placement = "left",
   disableSpacing,
-  cta = [
-    { id: "change-me-1", href: "/", text: "Change me", style: "Outline" },
-    { id: "change-me-2", href: "/", text: "Change me", style: "Ghost" },
-  ],
+  cta,
 }: Props) {
   return (
     <div class="lg:container md:max-w-6xl lg:mx-auto mx-4 text-sm">
@@ -52,25 +58,40 @@ export default function ImageWithParagraph({
           disableSpacing?.top ? "" : "pt-12 lg:pt-28"
         } ${disableSpacing?.bottom ? "" : "pb-12 lg:pb-28"}`}
       >
-        <div class="w-full md:w-1/2 border border-secondary rounded-lg overflow-hidden">
-          <Image
-            width={640}
-            height={640}
-            class="object-fit z-10"
-            sizes="(max-width: 640px) 100vw, 30vw"
-            src={image}
-            alt={image}
-            decoding="async"
-            loading="lazy"
-          />
-        </div>
+        {image && (
+          <div class="w-full md:w-1/2 rounded-lg overflow-hidden">
+            <Image
+              width={image.width || 640}
+              height={image.height || 640}
+              class="object-fit z-10"
+              sizes="(max-width: 640px) 100vw, 30vw"
+              src={image.source}
+              alt={image.description}
+              decoding="async"
+              loading={image.highPriority ? "eager" : "lazy"}
+              preload={image.highPriority}
+            />
+          </div>
+        )}
+
         <div class="w-full md:w-1/2 space-y-2 md:space-y-4 md:max-w-xl gap-4 z-10">
-          <p class="text-sm font-semibold">
-            {tagline}
-          </p>
-          <p class="text-4xl leading-snug">
-            {title}
-          </p>
+          <div class="flex items-center gap-2.5">
+            <p class="text-4xl md:text-5xl font-bold leading-snug">
+              {title}
+            </p>
+
+            {tagline && (
+              <p
+                style={{
+                  color: tagline.textColor,
+                  backgroundColor: tagline.backgroundColor,
+                }}
+                class="text-xs font-normal px-3 py-1 rounded-xl"
+              >
+                {tagline.text}
+              </p>
+            )}
+          </div>
           <p class="leading-normal">
             {description}
           </p>
