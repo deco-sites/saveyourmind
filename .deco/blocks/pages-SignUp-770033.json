@@ -1,7 +1,11 @@
 {
   "name": "SignUp",
   "path": "/sign-up",
-  "sections": [],
+  "sections": [
+    {
+      "__resolveType": "site/sections/RegistrationForm.tsx"
+    }
+  ],
   "seo": {
     "__resolveType": "website/sections/Seo/SeoV2.tsx"
   },
