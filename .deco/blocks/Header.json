@@ -21,8 +21,8 @@
     ],
     "buttons": [
       {
-        "id": "#",
-        "href": "#",
+        "id": "try-for-free-header",
+        "href": "/sign-up",
         "text": "Try for free",
         "outline": true
       }

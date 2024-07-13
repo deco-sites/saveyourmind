@@ -15,9 +15,9 @@
           "text": "Try for Free",
           "outline": true
         },
-        "id": "try-for-free",
-        "href": "#",
-        "text": "Try for free"
+        "id": "try-for-free-hero",
+        "text": "Try for free",
+        "href": "/sign-up"
       },
       "image": {
         "0": "h",
@@ -241,8 +241,8 @@
       "__resolveType": "site/sections/LargestHeading.tsx",
       "title": "Discover mindfulness",
       "cta": {
-        "id": "#",
-        "href": "#",
+        "id": "largest-heading-sign-up-btn",
+        "href": "/sign-up",
         "text": "Try for free"
       }
     },
