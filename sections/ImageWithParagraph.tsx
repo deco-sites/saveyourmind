@@ -76,7 +76,7 @@ export default function ImageWithParagraph({
 
         <div class="w-full md:w-1/2 space-y-2 md:space-y-4 md:max-w-xl gap-4 z-10">
           <div class="flex items-center gap-2.5">
-            <p class="text-4xl md:text-5xl font-bold leading-snug">
+            <p class="text-3xl font-bold leading-snug">
               {title}
             </p>
 
@@ -92,9 +92,11 @@ export default function ImageWithParagraph({
               </p>
             )}
           </div>
-          <p class="leading-normal">
+
+          <p class="leading-relaxed font-normal text-lg">
             {description}
           </p>
+
           <div class="flex gap-3 pt-4">
             {cta?.map((item) => (
               <a
