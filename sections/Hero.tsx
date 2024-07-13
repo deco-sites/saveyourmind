@@ -1,5 +1,6 @@
 import type { ImageWidget } from "apps/admin/widgets.ts";
 import Image from "apps/website/components/Image.tsx";
+import { asset } from "$fresh/runtime.ts";
 
 export interface CTA {
   id?: string;
@@ -76,21 +77,21 @@ export default function HeroFlats({
 
           <div class="flex items-center justify-center w-full relative overflow-x-hidden">
             <image
-              src="/cloud_2.png"
+              src={asset("/cloud_2.png")}
               width={320}
               height={160}
               alt="Animated Cloud"
               class="absolute top-0 animated_cloud"
             />
             <image
-              src="/cloud_1.png"
+              src={asset("/cloud_1.png")}
               width={320}
               height={160}
               alt="Second Animated Cloud"
               class="absolute right-0 bottom-1/2 animated_cloud"
             />
             <image
-              src="/cloud_2.png"
+              src={asset("/cloud_2.png")}
               width={320}
               height={160}
               alt="Third Animated Cloud"
