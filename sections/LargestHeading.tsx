@@ -27,7 +27,7 @@ export default function LargestHeading({ title, cta }: Props) {
       />
 
       <div class="flex flex-col gap-12 items-center justify-center container max-w-2xl">
-        <h2 class="text-6xl lg:text-8xl leading-snug lg:leading-loose font-bold text-center text-base-content z-20">
+        <h2 class="text-6xl lg:text-8xl leading-snug font-bold text-center text-base-content z-20">
           {title}
         </h2>
 
