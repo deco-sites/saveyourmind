@@ -136,5 +136,13 @@
     "path": "/login",
     "blockType": "pages",
     "__resolveType": "website/pages/Page.tsx"
+  },
+  "/.deco/blocks/Preview%20%2Floaders%2Fuser%2Fget-by-email.ts.json": {
+    "blockType": "loaders",
+    "__resolveType": "site/loaders/user/get-by-email.ts"
+  },
+  "/.deco/blocks/Preview%20site%2Factions%2Fuser%2Fsubscribe.ts.json": {
+    "blockType": "actions",
+    "__resolveType": "site/actions/user/subscribe.ts"
   }
 }
