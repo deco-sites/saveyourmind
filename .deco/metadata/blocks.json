@@ -124,5 +124,11 @@
   "/.deco/blocks/Faq.json": {
     "blockType": "sections",
     "__resolveType": "site/sections/Faq.tsx"
+  },
+  "/.deco/blocks/pages-SignUp-770033.json": {
+    "name": "SignUp",
+    "path": "/sign-up",
+    "blockType": "pages",
+    "__resolveType": "website/pages/Page.tsx"
   }
 }
