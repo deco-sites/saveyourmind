@@ -88,7 +88,7 @@ export default function HeroFlats({
               width={320}
               height={160}
               alt="Second Animated Cloud"
-              class="absolute right-0 bottom-1/2 animated_cloud"
+              class="hidden md:block absolute right-0 bottom-1/2 animated_cloud"
             />
             <image
               src={asset("/cloud_2.png")}
