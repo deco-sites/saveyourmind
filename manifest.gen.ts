@@ -13,12 +13,13 @@ import * as $$$$$$5 from "./sections/HowItWorks.tsx";
 import * as $$$$$$6 from "./sections/IconWithParagraph.tsx";
 import * as $$$$$$7 from "./sections/ImageWithParagraph.tsx";
 import * as $$$$$$8 from "./sections/LargestHeading.tsx";
-import * as $$$$$$9 from "./sections/Logos.tsx";
-import * as $$$$$$10 from "./sections/OurTeachers.tsx";
-import * as $$$$$$11 from "./sections/PersonalizedSections.tsx";
-import * as $$$$$$12 from "./sections/RegistrationForm.tsx";
-import * as $$$$$$13 from "./sections/Testimonials.tsx";
-import * as $$$$$$14 from "./sections/Theme/Theme.tsx";
+import * as $$$$$$9 from "./sections/LoginForm.tsx";
+import * as $$$$$$10 from "./sections/Logos.tsx";
+import * as $$$$$$11 from "./sections/OurTeachers.tsx";
+import * as $$$$$$12 from "./sections/PersonalizedSections.tsx";
+import * as $$$$$$13 from "./sections/RegistrationForm.tsx";
+import * as $$$$$$14 from "./sections/Testimonials.tsx";
+import * as $$$$$$15 from "./sections/Theme/Theme.tsx";
 
 const manifest = {
   "sections": {
@@ -31,12 +32,13 @@ const manifest = {
     "site/sections/IconWithParagraph.tsx": $$$$$$6,
     "site/sections/ImageWithParagraph.tsx": $$$$$$7,
     "site/sections/LargestHeading.tsx": $$$$$$8,
-    "site/sections/Logos.tsx": $$$$$$9,
-    "site/sections/OurTeachers.tsx": $$$$$$10,
-    "site/sections/PersonalizedSections.tsx": $$$$$$11,
-    "site/sections/RegistrationForm.tsx": $$$$$$12,
-    "site/sections/Testimonials.tsx": $$$$$$13,
-    "site/sections/Theme/Theme.tsx": $$$$$$14,
+    "site/sections/LoginForm.tsx": $$$$$$9,
+    "site/sections/Logos.tsx": $$$$$$10,
+    "site/sections/OurTeachers.tsx": $$$$$$11,
+    "site/sections/PersonalizedSections.tsx": $$$$$$12,
+    "site/sections/RegistrationForm.tsx": $$$$$$13,
+    "site/sections/Testimonials.tsx": $$$$$$14,
+    "site/sections/Theme/Theme.tsx": $$$$$$15,
   },
   "apps": {
     "site/apps/decohub.ts": $$$$$$$$$$$0,

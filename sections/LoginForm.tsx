@@ -1,8 +1,8 @@
 export interface Props {
-  signUpText: string;
+  signInText: string;
 }
 
-export default function RegistrationForm({ signUpText = "Sign Up" }: Props) {
+export default function RegistrationForm({ signInText = "Log In" }: Props) {
   return (
     <div class="min-h-screen bg-base-200 text-gray-900 flex justify-center">
       <div class="max-w-screen-xl m-0 sm:m-10 bg-white shadow sm:rounded-lg flex justify-center flex-1">
@@ -14,7 +14,7 @@ export default function RegistrationForm({ signUpText = "Sign Up" }: Props) {
           </div>
           <div class="mt-12 flex flex-col items-center">
             <h1 class="text-2xl xl:text-3xl font-extrabold">
-              {signUpText}
+              {signInText}
             </h1>
             <div class="w-full flex-1 mt-8">
               <div class="flex flex-col items-center">
@@ -43,25 +43,20 @@ export default function RegistrationForm({ signUpText = "Sign Up" }: Props) {
                     </svg>
                   </div>
                   <span class="ml-4">
-                    Sign Up with Google
+                    Login with Google
                   </span>
                 </button>
               </div>
 
               <div class="my-12 border-b text-center">
                 <div class="leading-none px-2 inline-block text-sm text-gray-600 tracking-wide font-medium bg-white transform translate-y-1/2">
-                  Or sign up with e-mail
+                  Or login with e-mail
                 </div>
               </div>
 
               <div class="mx-auto max-w-xs">
                 <input
                   class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
-                  type="name"
-                  placeholder="Name"
-                />
-                <input
-                  class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5"
                   type="email"
                   placeholder="Email"
                 />
@@ -84,30 +79,20 @@ export default function RegistrationForm({ signUpText = "Sign Up" }: Props) {
                     <path d="M20 8v6M23 11h-6" />
                   </svg>
                   <span class="ml-3">
-                    Sign Up
+                    Login
                   </span>
                 </button>
                 <div class="my-4 border-b text-center">
                   <div class="leading-none px-2 inline-block text-sm text-gray-600 tracking-wide font-medium bg-white transform translate-y-1/2">
                     Or{" "}
                     <a
-                      href="/login"
+                      href="/sign-up"
                       class="border-b border-gray-500 border-dotted"
                     >
-                      login
+                      sign up
                     </a>
                   </div>
                 </div>
-                <p class="mt-6 text-xs text-gray-600 text-center">
-                  I agree to abide by SaveYourMind's{" "}
-                  <a href="#" class="border-b border-gray-500 border-dotted">
-                    Terms of Service
-                  </a>{" "}
-                  and its{" "}
-                  <a href="#" class="border-b border-gray-500 border-dotted">
-                    Privacy Policy
-                  </a>
-                </p>
               </div>
             </div>
           </div>
