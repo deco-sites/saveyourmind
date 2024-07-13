@@ -171,26 +171,26 @@
             {
               "image": {
                 "source": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11501/5ab945a4-0587-4078-b593-5ab5b062471a",
-                "description": "First Image"
+                "description": "Mindful Meditation"
               },
               "title": "Mindful Meditation",
-              "subtitle": "Cultivate Inner Calm"
+              "subtitle": "<p style=\"text-align: center\">Cultivate Inner Calm<br>Reduce stress and increase focus with meditation.</p>"
             },
             {
               "image": {
                 "source": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11501/22378aef-58f6-462f-a1a0-3a1c7a1f843e",
-                "description": "Second Image"
+                "description": "Sleep Better"
               },
               "title": "Sleep Better",
-              "subtitle": "Cultivate Inner Calm"
+              "subtitle": "<p style=\"text-align: center\">Tips for Resful Sleep<br>Discover strategies for better sleep and wake up refreshed.</p>"
             },
             {
               "image": {
                 "source": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11501/b1a3626a-5928-4356-9946-667469c1506f",
                 "description": "First Image"
               },
-              "title": "Mindful Meditation",
-              "subtitle": "Cultivate Inner Calm"
+              "title": "Breathe Deeply",
+              "subtitle": "<p style=\"text-align: center\">Herness the Power of Breath<br>Reduce stress and promote relaxation with breathing exercises</p>"
             }
           ]
         },
@@ -201,10 +201,34 @@
             {
               "image": {
                 "source": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11501/b64539ab-a7d5-4be2-a9cb-196af1841d12",
-                "description": "First"
+                "description": "Tara Nguyen"
               },
               "name": "Tara Nguyen",
               "biography": "Founder and director"
+            },
+            {
+              "image": {
+                "source": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11501/309977eb-7ca1-4921-b857-7fbdb95fee67",
+                "description": "Jack Sing"
+              },
+              "name": "Jack Sing",
+              "biography": "Meditation teacher"
+            },
+            {
+              "image": {
+                "source": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11501/d1a761c8-d207-4fa9-bcd8-6684180e2ba1",
+                "description": "Sharon Kendall"
+              },
+              "name": "Sharon Kendall",
+              "biography": "Mindfulness teacher"
+            },
+            {
+              "image": {
+                "source": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11501/128847d9-9cd4-4409-8a47-f0dc1871ecb6",
+                "description": "Mark Younes"
+              },
+              "name": "Mark Younes",
+              "biography": "Mindfulness teacher and coach"
             }
           ]
         },
