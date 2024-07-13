@@ -16,7 +16,7 @@
   "mainColors": {
     "base-100": "#727EFC",
     "primary": "#FDB800",
-    "secondary": "#E48BAE",
+    "secondary": "#fed2e3",
     "tertiary": "#FFFFFF",
     "neutral": "#000000",
     "info": "#D7931D",
@@ -49,6 +49,7 @@
     "base-200": "#6264D3",
     "base-300": "#1E0C31",
     "primary-content": "#CDCEF1",
-    "base-content": "#FFFFFF"
+    "base-content": "#FFFFFF",
+    "secondary-content": "#E48BAE"
   }
 }
