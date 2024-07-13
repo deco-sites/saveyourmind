@@ -53,7 +53,7 @@ export default function BlogPosts({
   ],
 }: Props) {
   return (
-    <div class="md:container md:max-w-4xl text-sm my-12 p-12 mx-4 md:mx-auto bg-secondary text-neutral rounded-3xl w-full">
+    <div class="md:container md:max-w-5xl text-sm my-12 p-12 bg-secondary text-neutral rounded-3xl w-full">
       <div class="flex flex-col items-center justify-center gap-10 w-full">
         <div class="flex-none space-y-6">
           {title && (

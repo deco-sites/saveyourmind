@@ -165,9 +165,62 @@
       "__resolveType": "site/sections/PersonalizedSections.tsx",
       "sections": [
         {
+          "__resolveType": "site/sections/HowItWorks.tsx",
+          "title": "How it works",
+          "contents": [
+            {
+              "image": {
+                "source": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11501/5ab945a4-0587-4078-b593-5ab5b062471a",
+                "description": "First Image"
+              },
+              "title": "Mindful Meditation",
+              "subtitle": "Cultivate Inner Calm"
+            },
+            {
+              "image": {
+                "source": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11501/22378aef-58f6-462f-a1a0-3a1c7a1f843e",
+                "description": "Second Image"
+              },
+              "title": "Sleep Better",
+              "subtitle": "Cultivate Inner Calm"
+            },
+            {
+              "image": {
+                "source": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11501/b1a3626a-5928-4356-9946-667469c1506f",
+                "description": "First Image"
+              },
+              "title": "Mindful Meditation",
+              "subtitle": "Cultivate Inner Calm"
+            }
+          ]
+        },
+        {
+          "__resolveType": "site/sections/OurTeachers.tsx",
+          "title": "Our Teachers",
+          "banners": [
+            {
+              "image": {
+                "source": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11501/b64539ab-a7d5-4be2-a9cb-196af1841d12",
+                "description": "First"
+              },
+              "name": "Tara Nguyen",
+              "biography": "Founder and director"
+            }
+          ]
+        },
+        {
           "__resolveType": "Faq"
         }
       ]
+    },
+    {
+      "__resolveType": "site/sections/LargestHeading.tsx",
+      "title": "Discover mindfulness",
+      "cta": {
+        "id": "#",
+        "href": "#",
+        "text": "Try for free"
+      }
     },
     {
       "__resolveType": "Footer"
