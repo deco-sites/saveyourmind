@@ -200,7 +200,7 @@ export const loader = async (
 ) => {
   const user = useUser(null, req);
 
-  if (user) redirect("/home");
+  if (user) redirect("/dashboard");
 
   const contentType = req.headers.get("Content-Type");
 

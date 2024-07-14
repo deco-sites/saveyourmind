@@ -154,5 +154,13 @@
     "path": "/dashboard",
     "blockType": "pages",
     "__resolveType": "website/pages/Page.tsx"
+  },
+  "/.deco/blocks/Preview%20site%2Fsections%2FLoginForm.tsx.json": {
+    "blockType": "sections",
+    "__resolveType": "site/sections/LoginForm.tsx"
+  },
+  "/.deco/blocks/Preview%20site%2Fsections%2FRegistrationForm.tsx.json": {
+    "blockType": "sections",
+    "__resolveType": "site/sections/RegistrationForm.tsx"
   }
 }
