@@ -6,6 +6,7 @@ import * as $$$$$$$$$0 from "./actions/user/subscribe.ts";
 import * as $$$$$$$$$$$0 from "./apps/decohub.ts";
 import * as $$$$$$$$$$$1 from "./apps/site.ts";
 import * as $$$0 from "./loaders/user/get-by-email.ts";
+import * as $$$1 from "./loaders/user/validate-user.ts";
 import * as $$$$$$0 from "./sections/BlogPosts.tsx";
 import * as $$$$$$1 from "./sections/Faq.tsx";
 import * as $$$$$$2 from "./sections/Footer.tsx";
@@ -26,6 +27,7 @@ import * as $$$$$$15 from "./sections/Theme/Theme.tsx";
 const manifest = {
   "loaders": {
     "site/loaders/user/get-by-email.ts": $$$0,
+    "site/loaders/user/validate-user.ts": $$$1,
   },
   "sections": {
     "site/sections/BlogPosts.tsx": $$$$$$0,

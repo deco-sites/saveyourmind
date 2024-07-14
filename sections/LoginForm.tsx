@@ -1,3 +1,6 @@
+import { useSection } from "deco/hooks/useSection.ts";
+import { AppContext } from "site/apps/site.ts";
+
 export interface Props {
   signInText: string;
 }
@@ -54,7 +57,13 @@ export default function RegistrationForm({ signInText = "Log In" }: Props) {
                 </div>
               </div>
 
-              <div class="mx-auto max-w-xs">
+              <form
+                hx-post={useSection()}
+                hx-swap="outerHTML"
+                hx-target="closest section"
+                hx-indicator="#submitButton"
+                class="mx-auto max-w-xs"
+              >
                 <input
                   class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
                   name="email"
@@ -97,7 +106,7 @@ export default function RegistrationForm({ signInText = "Log In" }: Props) {
                     </a>
                   </div>
                 </div>
-              </div>
+              </form>
             </div>
           </div>
         </div>
@@ -112,3 +121,28 @@ export default function RegistrationForm({ signInText = "Log In" }: Props) {
     </div>
   );
 }
+
+export const loader = async (
+  props: Props,
+  req: Request,
+  { invoke }: AppContext,
+) => {
+  const contentType = req.headers.get("Content-Type");
+
+  if (contentType === "application/x-www-form-urlencoded") {
+    const form = await req.formData();
+
+    const userData = await invoke.site.loaders.user["get-by-email"]({
+      email: form.get("email")?.toString(),
+      // password: form.get("passowrd")?.toString(),
+    });
+
+    console.log(userData);
+
+    return props;
+  }
+
+  return {
+    props,
+  };
+};

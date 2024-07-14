@@ -144,5 +144,9 @@
   "/.deco/blocks/Preview%20site%2Factions%2Fuser%2Fsubscribe.ts.json": {
     "blockType": "actions",
     "__resolveType": "site/actions/user/subscribe.ts"
+  },
+  "/.deco/blocks/Preview%20site%2Floaders%2Fuser%2Fvalidate-user.ts.json": {
+    "blockType": "loaders",
+    "__resolveType": "site/loaders/user/validate-user.ts"
   }
 }
