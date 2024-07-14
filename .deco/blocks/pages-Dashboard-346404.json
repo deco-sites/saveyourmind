@@ -3,20 +3,40 @@
   "path": "/dashboard",
   "sections": [
     {
-      "__resolveType": "Header"
+      "__resolveType": "site/sections/Header.tsx",
+      "navigation": {
+        "links": [
+          {
+            "label": "Meditation",
+            "url": "#"
+          },
+          {
+            "label": "Sleep",
+            "url": "#"
+          },
+          {
+            "label": "Stress",
+            "url": "#"
+          },
+          {
+            "label": "Mindfulness",
+            "url": "#"
+          }
+        ],
+        "buttons": []
+      }
     },
     {
       "__resolveType": "site/sections/WelcomeSection.tsx",
+      "name": "Areetha Zoya",
+      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11501/e0821bb0-a1c5-4977-9500-a94c6a54b4e8",
       "user": {
         "name": ".",
         "surname": ".",
         "email": ".",
         "password": ".",
-        "slug": ".",
-        "birthDate": "."
-      },
-      "name": "Areetha Zoya",
-      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11501/e0821bb0-a1c5-4977-9500-a94c6a54b4e8"
+        "slug": "."
+      }
     },
     {
       "__resolveType": "site/sections/EmotionsSection.tsx"
