@@ -182,5 +182,11 @@
   "/.deco/blocks/Preview%20blog%2Floaders%2FBlogpostList.ts.json": {
     "blockType": "loaders",
     "__resolveType": "blog/loaders/BlogpostList.ts"
+  },
+  "/.deco/blocks/pages-Blog%2520Page-183671.json": {
+    "name": "Blog Page",
+    "path": "/blog/:slug",
+    "blockType": "pages",
+    "__resolveType": "website/pages/Page.tsx"
   }
 }
