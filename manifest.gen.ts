@@ -8,23 +8,24 @@ import * as $$$$$$$$$$$1 from "./apps/site.ts";
 import * as $$$0 from "./loaders/podcast/get-episodes.ts";
 import * as $$$1 from "./loaders/user/get-by-email.ts";
 import * as $$$2 from "./loaders/user/validate-user.ts";
-import * as $$$$$$0 from "./sections/BlogPosts.tsx";
-import * as $$$$$$1 from "./sections/Dashboard/Episodes.tsx";
-import * as $$$$$$2 from "./sections/Faq.tsx";
-import * as $$$$$$3 from "./sections/Footer.tsx";
-import * as $$$$$$4 from "./sections/Header.tsx";
-import * as $$$$$$5 from "./sections/Hero.tsx";
-import * as $$$$$$6 from "./sections/HowItWorks.tsx";
-import * as $$$$$$7 from "./sections/IconWithParagraph.tsx";
-import * as $$$$$$8 from "./sections/ImageWithParagraph.tsx";
-import * as $$$$$$9 from "./sections/LargestHeading.tsx";
-import * as $$$$$$10 from "./sections/LoginForm.tsx";
-import * as $$$$$$11 from "./sections/Logos.tsx";
-import * as $$$$$$12 from "./sections/OurTeachers.tsx";
-import * as $$$$$$13 from "./sections/PersonalizedSections.tsx";
-import * as $$$$$$14 from "./sections/RegistrationForm.tsx";
-import * as $$$$$$15 from "./sections/Testimonials.tsx";
-import * as $$$$$$16 from "./sections/Theme/Theme.tsx";
+import * as $$$$$$0 from "./sections/BlogPost.tsx";
+import * as $$$$$$1 from "./sections/BlogPosts.tsx";
+import * as $$$$$$2 from "./sections/Dashboard/Episodes.tsx";
+import * as $$$$$$3 from "./sections/Faq.tsx";
+import * as $$$$$$4 from "./sections/Footer.tsx";
+import * as $$$$$$5 from "./sections/Header.tsx";
+import * as $$$$$$6 from "./sections/Hero.tsx";
+import * as $$$$$$7 from "./sections/HowItWorks.tsx";
+import * as $$$$$$8 from "./sections/IconWithParagraph.tsx";
+import * as $$$$$$9 from "./sections/ImageWithParagraph.tsx";
+import * as $$$$$$10 from "./sections/LargestHeading.tsx";
+import * as $$$$$$11 from "./sections/LoginForm.tsx";
+import * as $$$$$$12 from "./sections/Logos.tsx";
+import * as $$$$$$13 from "./sections/OurTeachers.tsx";
+import * as $$$$$$14 from "./sections/PersonalizedSections.tsx";
+import * as $$$$$$15 from "./sections/RegistrationForm.tsx";
+import * as $$$$$$16 from "./sections/Testimonials.tsx";
+import * as $$$$$$17 from "./sections/Theme/Theme.tsx";
 
 const manifest = {
   "loaders": {
@@ -33,23 +34,24 @@ const manifest = {
     "site/loaders/user/validate-user.ts": $$$2,
   },
   "sections": {
-    "site/sections/BlogPosts.tsx": $$$$$$0,
-    "site/sections/Dashboard/Episodes.tsx": $$$$$$1,
-    "site/sections/Faq.tsx": $$$$$$2,
-    "site/sections/Footer.tsx": $$$$$$3,
-    "site/sections/Header.tsx": $$$$$$4,
-    "site/sections/Hero.tsx": $$$$$$5,
-    "site/sections/HowItWorks.tsx": $$$$$$6,
-    "site/sections/IconWithParagraph.tsx": $$$$$$7,
-    "site/sections/ImageWithParagraph.tsx": $$$$$$8,
-    "site/sections/LargestHeading.tsx": $$$$$$9,
-    "site/sections/LoginForm.tsx": $$$$$$10,
-    "site/sections/Logos.tsx": $$$$$$11,
-    "site/sections/OurTeachers.tsx": $$$$$$12,
-    "site/sections/PersonalizedSections.tsx": $$$$$$13,
-    "site/sections/RegistrationForm.tsx": $$$$$$14,
-    "site/sections/Testimonials.tsx": $$$$$$15,
-    "site/sections/Theme/Theme.tsx": $$$$$$16,
+    "site/sections/BlogPost.tsx": $$$$$$0,
+    "site/sections/BlogPosts.tsx": $$$$$$1,
+    "site/sections/Dashboard/Episodes.tsx": $$$$$$2,
+    "site/sections/Faq.tsx": $$$$$$3,
+    "site/sections/Footer.tsx": $$$$$$4,
+    "site/sections/Header.tsx": $$$$$$5,
+    "site/sections/Hero.tsx": $$$$$$6,
+    "site/sections/HowItWorks.tsx": $$$$$$7,
+    "site/sections/IconWithParagraph.tsx": $$$$$$8,
+    "site/sections/ImageWithParagraph.tsx": $$$$$$9,
+    "site/sections/LargestHeading.tsx": $$$$$$10,
+    "site/sections/LoginForm.tsx": $$$$$$11,
+    "site/sections/Logos.tsx": $$$$$$12,
+    "site/sections/OurTeachers.tsx": $$$$$$13,
+    "site/sections/PersonalizedSections.tsx": $$$$$$14,
+    "site/sections/RegistrationForm.tsx": $$$$$$15,
+    "site/sections/Testimonials.tsx": $$$$$$16,
+    "site/sections/Theme/Theme.tsx": $$$$$$17,
   },
   "actions": {
     "site/actions/user/subscribe.ts": $$$$$$$$$0,

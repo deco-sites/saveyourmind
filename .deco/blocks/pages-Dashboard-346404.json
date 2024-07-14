@@ -16,7 +16,10 @@
       }
     },
     {
-      "__resolveType": "site/sections/BlogPosts.tsx"
+      "__resolveType": "site/sections/BlogPosts.tsx",
+      "posts": {
+        "__resolveType": "Preview blog/loaders/BlogpostList.ts"
+      }
     },
     {
       "__resolveType": "Footer"
