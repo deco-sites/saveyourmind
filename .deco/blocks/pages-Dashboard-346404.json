@@ -23,6 +23,10 @@
     },
     {
       "__resolveType": "Footer"
+    },
+    {
+      "__resolveType": "site/sections/Back.tsx",
+      "backTo": "/dashboard"
     }
   ],
   "seo": {

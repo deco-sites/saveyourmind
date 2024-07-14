@@ -221,13 +221,14 @@ export const loader = async (
     if (status == "400") {
       return {
         ...props,
-        submissionResponse: { error: "Email already exists" },
+        submissionResponse: { error: "Email already exists." },
       };
     }
 
     if (status == "200") {
       return {
         ...props,
+        submissionResponse: { error: "Please, verify your email." },
       };
     }
   }

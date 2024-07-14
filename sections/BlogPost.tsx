@@ -47,7 +47,7 @@ export default function BlogPostSection({ page }: Props) {
   const { title, authors, image, date, content, excerpt } = page?.post ||
     DEFAULT_PROPS;
 
-  const formattedDate = new Date(date).toLocaleDateString("pt-BR", {
+  const formattedDate = new Date(date).toLocaleDateString("en-US", {
     year: "numeric",
     month: "long",
     day: "numeric",
