@@ -55,17 +55,24 @@ function SliderItem(
         <Image
           src={content.image.url || ""}
           alt={content.title}
-          width={256}
+          width={320}
           height={256}
           class="object-cover h-64 rounded-lg"
         />
 
-        <div class="flex flex-col justify-between gap-5 h-[92px]">
-          <span class="font-bold text-base">{content.title}</span>
+        <div class="flex flex-col justify-between gap-5 h-full">
+          <div class="flex flex-col gap-5">
+            <span class="font-bold text-base">{content.title}</span>
 
-          <p class="font-normal text-base">
-            by {content.hosts[0].fullName} • {content.audioDuration}m
-          </p>
+            <p class="font-normal text-base">
+              by {content.hosts[0].fullName} • {content.audioDuration}m
+            </p>
+          </div>
+
+          <audio controls>
+            <source src={content.audioFile.url} type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
         </div>
       </a>
     </div>
@@ -99,7 +106,7 @@ export default function Episodes(
         {episodes?.map((episode, index) => (
           <Slider.Item
             index={index}
-            class="carousel-item max-w-64 w-full"
+            class="carousel-item max-w-80 w-full"
           >
             <SliderItem
               slide={episode}
