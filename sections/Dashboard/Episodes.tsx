@@ -124,7 +124,7 @@ export default function Episodes(
         </h2>
 
         <Slider
-          class="carousel carousel-center w-full col-span-full row-span-full gap-6"
+          class="carousel carousel-center w-full col-span-full row-span-full gap-3"
           rootId={id}
           interval={interval && interval * 1e3}
           infinite

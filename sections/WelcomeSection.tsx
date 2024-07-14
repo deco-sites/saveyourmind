@@ -15,7 +15,7 @@ export default function WelcomeSection({ user, image }: Props) {
     <section class="w-full max-w-6xl flex items-center justify-between container px-4 xl:px-0 mt-4">
       <div class="flex flex-col">
         <p>Welcome back,</p>
-        <p class="text-3xl">{user.name} {user.surname}</p>
+        <p class="text-3xl font-bold">{user.name} {user.surname}</p>
       </div>
       <div>
         <Image

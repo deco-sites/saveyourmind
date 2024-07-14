@@ -2,10 +2,12 @@ import Image from "apps/website/components/Image.tsx";
 
 export default function EmotionsSection() {
   return (
-    <section class="w-full bg-[#656fdf] flex items-center justify-center pt-4 pb-3.5 my-4">
+    <section class="w-full bg-[#656fdf] flex items-center justify-center pt-4 pb-3.5 mt-6 mb-4">
       <div class="flex flex-col items-center justify-center container w-full max-w-6xl">
         <div class="flex items-center justify-center">
-          <p class="text-3xl">How are you feeling today?</p>
+          <p class="text-xl md:text-3xl font-bold">
+            How are you feeling today?
+          </p>
         </div>
         <div class="flex items-center justify-center py-4 gap-4 md:gap-10">
           <button>
