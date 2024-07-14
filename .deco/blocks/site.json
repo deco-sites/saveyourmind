@@ -5,7 +5,7 @@
     "jsonLDs": [],
     "noIndexing": false,
     "description": "Discover SaveYourMind, your go-to online resource for mental health and wellness. Access expert advice, self-help guides, mindfulness tools, and a supportive community to nurture a healthy mind and improve your well-being. Join us on a journey to better mental health.",
-    "titleTemplate": "%s | SaveYourMind",
+    "titleTemplate": "%s",
     "descriptionTemplate": "%s | SaveYourMind.cx",
     "favicon": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11501/ba9601a8-8ce5-4222-bc8b-f3287803dc3b",
     "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/4763/1350f37f-88ab-4cf1-bcf6-c386bcf8b238"
@@ -30,5 +30,14 @@
   "firstByteThresholdMS": false,
   "theme": {
     "__resolveType": "MindTune"
+  },
+  "abTesting": {
+    "replaces": [],
+    "includeScriptsToHead": {
+      "includes": []
+    }
+  },
+  "flavor": {
+    "framework": "htmx"
   }
 }
