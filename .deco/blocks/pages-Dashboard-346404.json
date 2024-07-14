@@ -29,14 +29,7 @@
     {
       "__resolveType": "site/sections/WelcomeSection.tsx",
       "name": "Areetha Zoya",
-      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11501/e0821bb0-a1c5-4977-9500-a94c6a54b4e8",
-      "user": {
-        "name": ".",
-        "surname": ".",
-        "email": ".",
-        "password": ".",
-        "slug": "."
-      }
+      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11501/e0821bb0-a1c5-4977-9500-a94c6a54b4e8"
     },
     {
       "__resolveType": "site/sections/EmotionsSection.tsx"
@@ -59,10 +52,6 @@
     },
     {
       "__resolveType": "Footer"
-    },
-    {
-      "__resolveType": "site/sections/Back.tsx",
-      "backTo": "/dashboard"
     }
   ],
   "seo": {
