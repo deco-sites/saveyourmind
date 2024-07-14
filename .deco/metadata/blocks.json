@@ -148,5 +148,11 @@
   "/.deco/blocks/Preview%20site%2Floaders%2Fuser%2Fvalidate-user.ts.json": {
     "blockType": "loaders",
     "__resolveType": "site/loaders/user/validate-user.ts"
+  },
+  "/.deco/blocks/pages-Dashboard-346404.json": {
+    "name": "Dashboard",
+    "path": "/dashboard",
+    "blockType": "pages",
+    "__resolveType": "website/pages/Page.tsx"
   }
 }
