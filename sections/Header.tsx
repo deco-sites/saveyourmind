@@ -43,7 +43,7 @@ export default function Header({
       <input id="mobile-drawer-nav" type="checkbox" class="drawer-toggle" />
 
       {/* main content */}
-      <div class="drawer-content container lg:px-0 px-4 flex gap-8 items-center justify-between py-4">
+      <div class="drawer-content container md:max-w-6xl lg:px-0 px-4 flex gap-8 items-center justify-between py-4">
         <a href="/">
           {logo
             ? (
