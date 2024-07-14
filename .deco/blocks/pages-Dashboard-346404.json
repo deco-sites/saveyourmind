@@ -48,7 +48,9 @@
       "__resolveType": "site/sections/BlogPosts.tsx",
       "posts": {
         "__resolveType": "Preview blog/loaders/BlogpostList.ts"
-      }
+      },
+      "description": "Explore a collection of articles on mental health. This space provides insights, advice, and stories to promote mental well-being. ",
+      "title": "Blogposts"
     },
     {
       "__resolveType": "Footer"
