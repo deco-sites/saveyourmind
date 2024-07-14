@@ -73,7 +73,7 @@ export default function BlogPosts({
       <div class="space-y-16">
         <div class="flex flex-col lg:flex-row gap-4 justify-between">
           <div class="space-y-6 lg:w-1/2">
-            <h2 class="text-4xl leading-snug">
+            <h2 class="text-4xl leading-snug font-black text-base-content">
               {title}
             </h2>
             <p class="text-lg">
