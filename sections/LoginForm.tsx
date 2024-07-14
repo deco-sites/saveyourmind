@@ -1,11 +1,16 @@
 import { useSection } from "deco/hooks/useSection.ts";
+import { redirect } from "deco/mod.ts";
 import { AppContext } from "site/apps/site.ts";
+import { useUser } from "site/hooks/useUser.ts";
 
 export interface Props {
   signInText: string;
+  submissionResponse?: { error?: string };
 }
 
-export default function RegistrationForm({ signInText = "Log In" }: Props) {
+export default function RegistrationForm(
+  { signInText = "Log In", submissionResponse }: Props,
+) {
   return (
     <div class="min-h-screen bg-base-200 text-gray-900 flex justify-center">
       <div class="max-w-screen-xl m-0 sm:m-10 bg-white shadow sm:rounded-lg flex justify-center flex-1">
@@ -78,7 +83,11 @@ export default function RegistrationForm({ signInText = "Log In" }: Props) {
                   placeholder="Password"
                   required
                 />
-                <button class="mt-5 tracking-wide font-semibold bg-indigo-500 text-gray-100 w-full py-4 rounded-lg hover:bg-indigo-700 transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none">
+                <button
+                  id="submitButton"
+                  type="submit"
+                  class="mt-5 tracking-wide font-semibold bg-indigo-500 text-gray-100 w-full py-4 rounded-lg hover:bg-indigo-700 transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none"
+                >
                   <svg
                     class="w-6 h-6 -ml-2"
                     fill="none"
@@ -106,6 +115,24 @@ export default function RegistrationForm({ signInText = "Log In" }: Props) {
                     </a>
                   </div>
                 </div>
+                {submissionResponse?.error && (
+                  <div role="alert" class="alert alert-warning mt-4">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="stroke-current shrink-0 h-6 w-6"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
+                      />
+                    </svg>
+                    <span>{submissionResponse?.error}</span>
+                  </div>
+                )}
               </form>
             </div>
           </div>
@@ -127,22 +154,30 @@ export const loader = async (
   req: Request,
   { invoke }: AppContext,
 ) => {
+  const user = useUser(null, req);
+
+  if (user) redirect("/home");
+
   const contentType = req.headers.get("Content-Type");
 
   if (contentType === "application/x-www-form-urlencoded") {
     const form = await req.formData();
 
-    const userData = await invoke.site.loaders.user["get-by-email"]({
+    const user = await invoke.site.loaders.user["validate-user"]({
       email: form.get("email")?.toString(),
-      // password: form.get("passowrd")?.toString(),
+      password: form.get("password")?.toString(),
     });
 
-    console.log(userData);
-
-    return props;
+    if (!user) {
+      return {
+        ...props,
+        submissionResponse: { error: "Wrong credentials. Try again." },
+      };
+    }
   }
 
   return {
-    props,
+    ...props,
+    submissionResponse: null,
   };
 };

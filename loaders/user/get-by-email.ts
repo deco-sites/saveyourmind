@@ -19,7 +19,11 @@ export default async function loader({ email }: Props): Promise<APIResponse> {
 
   const query = `query GetSubscriberByEmail($email: String!) {
     subscriber(where: {email: $email}) {
+      slug
+      name
+      surname
       email
+      password
     }
   }`;
 

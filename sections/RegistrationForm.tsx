@@ -1,6 +1,8 @@
 import { useSection } from "deco/hooks/useSection.ts";
 import { AppContext } from "site/apps/site.ts";
 import { User } from "site/actions/user/subscribe.ts";
+import { redirect } from "deco/mod.ts";
+import { useUser } from "site/hooks/useUser.ts";
 
 export interface Props {
   signUpText: string;
@@ -196,6 +198,10 @@ export const loader = async (
   req: Request,
   { invoke }: AppContext,
 ) => {
+  const user = useUser(null, req);
+
+  if (user) redirect("/home");
+
   const contentType = req.headers.get("Content-Type");
 
   if (contentType === "application/x-www-form-urlencoded") {

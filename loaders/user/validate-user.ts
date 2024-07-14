@@ -1,4 +1,6 @@
 import { compare } from "bcrypt";
+import { create } from "djwt";
+import { setCookie } from "std/http/cookie.ts";
 import { AppContext } from "site/apps/site.ts";
 
 export interface Props {
@@ -6,25 +8,59 @@ export interface Props {
   password: string;
 }
 
+export type APIResponse = {
+  slug: string;
+  username: string;
+  surname: string;
+  email: string;
+};
+
+export type Status = {
+  message: string;
+  code: "200" | "401" | "404";
+};
+
 export default async function loader(
   { email, password }: Props,
   _req: Request,
-  { invoke }: AppContext,
-) {
-  const data = await invoke.site.loaders.user["get-by-email"]({ email });
+  ctx: AppContext,
+): Promise<APIResponse | null> {
+  const data = await ctx.invoke.site.loaders.user["get-by-email"]({ email });
 
   if (!data || !data.subscriber) {
-    throw new Error("User does not exists!");
+    return null;
   }
 
   const isValid = await compare(password, data.subscriber.password);
 
   if (!isValid) {
-    throw new Error("Wrong credentials. Try again.");
+    return null;
   }
 
+  const key = await crypto.subtle.generateKey(
+    { name: "HMAC", hash: "SHA-512" },
+    true,
+    ["sign", "verify"],
+  );
+
+  const expiresInTwoDays = 60 * 60 * 24 * 2;
+
+  const jwt = await create({ alg: "HS512", typ: "JWT" }, {
+    subscriber: data.subscriber,
+    exp: expiresInTwoDays,
+  }, key);
+
+  setCookie(ctx.response.headers, {
+    name: "SaveYourMindAutCookie",
+    value: jwt,
+    path: "/",
+    maxAge: expiresInTwoDays,
+    sameSite: "Strict",
+    httpOnly: true,
+  });
+
   return {
-    id: data.subscriber.slug,
+    slug: data.subscriber.slug,
     username: data.subscriber.name,
     surname: data.subscriber.surname,
     email: data.subscriber.email,
