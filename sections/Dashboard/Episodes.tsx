@@ -60,8 +60,9 @@ function SliderItem(
           class="object-cover h-64 rounded-lg"
         />
 
-        <div class="flex flex-col gap-5">
+        <div class="flex flex-col justify-between gap-5 h-[92px]">
           <span class="font-bold text-base">{content.title}</span>
+
           <p class="font-normal text-base">
             by {content.hosts[0].fullName} • {content.audioDuration}m
           </p>

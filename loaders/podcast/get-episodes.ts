@@ -12,7 +12,7 @@ export type APIResponse = {
   episodes: Episode[];
 };
 
-export default async function loader(): Promise<APIResponse | null> {
+export default async function loader(): Promise<Episode[] | null> {
   const hygraph = createGraphqlClient({
     endpoint:
       "https://sa-east-1.cdn.hygraph.com/content/clubpz2af000008l67minhv6u/master",
@@ -36,7 +36,7 @@ export default async function loader(): Promise<APIResponse | null> {
     query,
   }) as APIResponse;
 
-  return data;
+  return data.episodes;
 }
 
 export const cache = "stale-while-revalidate";
