@@ -188,5 +188,13 @@
     "path": "/blog/:slug",
     "blockType": "pages",
     "__resolveType": "website/pages/Page.tsx"
+  },
+  "/.deco/blocks/Preview%20site%2Floaders%2Fuser%2Fget-user.ts.json": {
+    "blockType": "loaders",
+    "__resolveType": "site/loaders/user/get-user.ts"
+  },
+  "/.deco/blocks/Preview%20%2Floaders%2Fuser%2Fget-user.ts.json": {
+    "blockType": "loaders",
+    "__resolveType": "site/loaders/user/get-user.ts"
   }
 }

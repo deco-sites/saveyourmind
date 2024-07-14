@@ -3,10 +3,28 @@
   "path": "/dashboard",
   "sections": [
     {
+      "__resolveType": "Header"
+    },
+    {
+      "__resolveType": "site/sections/WelcomeSection.tsx",
+      "user": {
+        "name": ".",
+        "surname": ".",
+        "email": ".",
+        "password": ".",
+        "slug": "."
+      },
+      "name": "Areetha Zoya",
+      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11501/e0821bb0-a1c5-4977-9500-a94c6a54b4e8"
+    },
+    {
+      "__resolveType": "site/sections/EmotionsSection.tsx"
+    },
+    {
       "__resolveType": "site/sections/Dashboard/Episodes.tsx",
       "title": "Featured Activities",
       "id": "episodes",
-      "arrows": false,
+      "arrows": true,
       "interval": 4,
       "episodes": {
         "__resolveType": "Preview site/loaders/podcast/get-episodes.ts"
@@ -20,6 +38,10 @@
     },
     {
       "__resolveType": "Footer"
+    },
+    {
+      "__resolveType": "site/sections/Back.tsx",
+      "backTo": "/dashboard"
     }
   ],
   "seo": {
