@@ -1,4 +1,4 @@
-import { compare } from "bcrypt";
+import { verifyPassword } from "site/sdk/usePassword.ts";
 import { create } from "djwt";
 import { setCookie } from "std/http/cookie.ts";
 import { AppContext } from "site/apps/site.ts";
@@ -31,7 +31,7 @@ export default async function loader(
     return null;
   }
 
-  const isValid = await compare(password, data.subscriber.password);
+  const isValid = await verifyPassword(data.subscriber.password, password);
 
   if (!isValid) {
     return null;

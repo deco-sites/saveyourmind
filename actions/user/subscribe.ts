@@ -1,6 +1,6 @@
 import { createGraphqlClient } from "apps/utils/graphql.ts";
 import { AppContext } from "site/apps/site.ts";
-import { hash } from "bcrypt";
+import { hashPassword } from "site/sdk/usePassword.ts";
 
 export interface User {
   name: string;
@@ -36,7 +36,7 @@ export default async function action(
     }
   `;
 
-  const encryptedPassword = await hash(user.password);
+  const encryptedPassword = await hashPassword(user.password);
 
   try {
     await hygraph.query({
