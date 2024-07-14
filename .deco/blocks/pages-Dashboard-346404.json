@@ -6,7 +6,7 @@
       "__resolveType": "site/sections/Dashboard/Episodes.tsx",
       "title": "Featured Activities",
       "id": "episodes",
-      "arrows": true,
+      "arrows": false,
       "interval": 4,
       "episodes": {
         "__resolveType": "Preview site/loaders/podcast/get-episodes.ts"
