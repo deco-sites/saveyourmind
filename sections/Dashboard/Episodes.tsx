@@ -84,8 +84,8 @@ export default function Episodes(
   if (!episodes || episodes.length === 0) return null;
 
   return (
-    <div class="flex flex-col gap-12 lg:container md:max-w-6xl lg:mx-auto mx-4 text-sm py-10">
-      <h2 class="text-4xl leading-snug font-black text-base-300">
+    <div class="flex flex-col gap-12 lg:container md:max-w-6xl lg:mx-auto px-4 xl:px-0 text-sm py-10">
+      <h2 class="text-4xl leading-snug font-black text-base-content">
         {title}
       </h2>
 

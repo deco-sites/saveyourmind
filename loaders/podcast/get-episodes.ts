@@ -3,6 +3,7 @@ import { createGraphqlClient } from "apps/utils/graphql.ts";
 export interface Episode {
   id: string;
   title: string;
+  audioFile: { url: string };
   audioDuration: number;
   hosts: { fullName: string }[];
   image: { url: string };
@@ -22,6 +23,9 @@ export default async function loader(): Promise<Episode[] | null> {
     episodes {
       id
       title
+      audioFile {
+        url
+      }
       audioDuration
       hosts {
         fullName

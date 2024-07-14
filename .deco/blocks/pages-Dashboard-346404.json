@@ -12,7 +12,8 @@
         "surname": ".",
         "email": ".",
         "password": ".",
-        "slug": "."
+        "slug": ".",
+        "birthDate": "."
       },
       "name": "Areetha Zoya",
       "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11501/e0821bb0-a1c5-4977-9500-a94c6a54b4e8"

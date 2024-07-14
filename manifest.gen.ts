@@ -12,22 +12,23 @@ import * as $$$$$$0 from "./sections/Back.tsx";
 import * as $$$$$$1 from "./sections/BlogPost.tsx";
 import * as $$$$$$2 from "./sections/BlogPosts.tsx";
 import * as $$$$$$3 from "./sections/Dashboard/Episodes.tsx";
-import * as $$$$$$4 from "./sections/Faq.tsx";
-import * as $$$$$$5 from "./sections/Footer.tsx";
-import * as $$$$$$6 from "./sections/Header.tsx";
-import * as $$$$$$7 from "./sections/Hero.tsx";
-import * as $$$$$$8 from "./sections/HowItWorks.tsx";
-import * as $$$$$$9 from "./sections/IconWithParagraph.tsx";
-import * as $$$$$$10 from "./sections/ImageWithParagraph.tsx";
-import * as $$$$$$11 from "./sections/LargestHeading.tsx";
-import * as $$$$$$12 from "./sections/LoginForm.tsx";
-import * as $$$$$$13 from "./sections/Logos.tsx";
-import * as $$$$$$14 from "./sections/OurTeachers.tsx";
-import * as $$$$$$15 from "./sections/PersonalizedSections.tsx";
-import * as $$$$$$16 from "./sections/RegistrationForm.tsx";
-import * as $$$$$$17 from "./sections/Testimonials.tsx";
-import * as $$$$$$18 from "./sections/Theme/Theme.tsx";
-import * as $$$$$$19 from "./sections/WelcomeSection.tsx";
+import * as $$$$$$4 from "./sections/EmotionsSection.tsx";
+import * as $$$$$$5 from "./sections/Faq.tsx";
+import * as $$$$$$6 from "./sections/Footer.tsx";
+import * as $$$$$$7 from "./sections/Header.tsx";
+import * as $$$$$$8 from "./sections/Hero.tsx";
+import * as $$$$$$9 from "./sections/HowItWorks.tsx";
+import * as $$$$$$10 from "./sections/IconWithParagraph.tsx";
+import * as $$$$$$11 from "./sections/ImageWithParagraph.tsx";
+import * as $$$$$$12 from "./sections/LargestHeading.tsx";
+import * as $$$$$$13 from "./sections/LoginForm.tsx";
+import * as $$$$$$14 from "./sections/Logos.tsx";
+import * as $$$$$$15 from "./sections/OurTeachers.tsx";
+import * as $$$$$$16 from "./sections/PersonalizedSections.tsx";
+import * as $$$$$$17 from "./sections/RegistrationForm.tsx";
+import * as $$$$$$18 from "./sections/Testimonials.tsx";
+import * as $$$$$$19 from "./sections/Theme/Theme.tsx";
+import * as $$$$$$20 from "./sections/WelcomeSection.tsx";
 
 const manifest = {
   "loaders": {
@@ -40,22 +41,23 @@ const manifest = {
     "site/sections/BlogPost.tsx": $$$$$$1,
     "site/sections/BlogPosts.tsx": $$$$$$2,
     "site/sections/Dashboard/Episodes.tsx": $$$$$$3,
-    "site/sections/Faq.tsx": $$$$$$4,
-    "site/sections/Footer.tsx": $$$$$$5,
-    "site/sections/Header.tsx": $$$$$$6,
-    "site/sections/Hero.tsx": $$$$$$7,
-    "site/sections/HowItWorks.tsx": $$$$$$8,
-    "site/sections/IconWithParagraph.tsx": $$$$$$9,
-    "site/sections/ImageWithParagraph.tsx": $$$$$$10,
-    "site/sections/LargestHeading.tsx": $$$$$$11,
-    "site/sections/LoginForm.tsx": $$$$$$12,
-    "site/sections/Logos.tsx": $$$$$$13,
-    "site/sections/OurTeachers.tsx": $$$$$$14,
-    "site/sections/PersonalizedSections.tsx": $$$$$$15,
-    "site/sections/RegistrationForm.tsx": $$$$$$16,
-    "site/sections/Testimonials.tsx": $$$$$$17,
-    "site/sections/Theme/Theme.tsx": $$$$$$18,
-    "site/sections/WelcomeSection.tsx": $$$$$$19,
+    "site/sections/EmotionsSection.tsx": $$$$$$4,
+    "site/sections/Faq.tsx": $$$$$$5,
+    "site/sections/Footer.tsx": $$$$$$6,
+    "site/sections/Header.tsx": $$$$$$7,
+    "site/sections/Hero.tsx": $$$$$$8,
+    "site/sections/HowItWorks.tsx": $$$$$$9,
+    "site/sections/IconWithParagraph.tsx": $$$$$$10,
+    "site/sections/ImageWithParagraph.tsx": $$$$$$11,
+    "site/sections/LargestHeading.tsx": $$$$$$12,
+    "site/sections/LoginForm.tsx": $$$$$$13,
+    "site/sections/Logos.tsx": $$$$$$14,
+    "site/sections/OurTeachers.tsx": $$$$$$15,
+    "site/sections/PersonalizedSections.tsx": $$$$$$16,
+    "site/sections/RegistrationForm.tsx": $$$$$$17,
+    "site/sections/Testimonials.tsx": $$$$$$18,
+    "site/sections/Theme/Theme.tsx": $$$$$$19,
+    "site/sections/WelcomeSection.tsx": $$$$$$20,
   },
   "actions": {
     "site/actions/user/subscribe.ts": $$$$$$$$$0,
