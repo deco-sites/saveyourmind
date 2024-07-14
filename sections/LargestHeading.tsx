@@ -8,7 +8,7 @@ export interface Props {
 
 export default function LargestHeading({ title, cta }: Props) {
   return (
-    <div class="flex items-center justify-center px-4 py-20 lg:py-48 relative">
+    <div class="flex items-center justify-center px-4 py-20 lg:py-48 relative overflow-hidden">
       <image
         src={asset("/cloud_2.png")}
         width={320}

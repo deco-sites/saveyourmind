@@ -89,7 +89,7 @@ export default function Footer({
               <div class="flex gap-9">
                 {links?.map((link) => (
                   <div>
-                    <h4 class="font-semibold mb-4">{link.title}</h4>
+                    <h3 class="font-semibold mb-4">{link.title}</h3>
                     {link.items?.map((item) => (
                       <a
                         class="block text-primary-content hover:text-primary-content/90 py-1"
@@ -105,7 +105,12 @@ export default function Footer({
 
             <div class="flex justify-center lg:justify-start gap-3">
               {social?.map((item) => (
-                <a class="block" href={item.href} target="_blank">
+                <a
+                  class="block"
+                  href={item.href}
+                  target="_blank"
+                  aria-label={item.network}
+                >
                   {item.network == "Facebook" && (
                     <svg
                       width="24"

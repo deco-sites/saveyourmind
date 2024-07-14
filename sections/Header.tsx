@@ -75,7 +75,7 @@ export default function Header({
           ))}
         </ul>
 
-        <ul class="hidden lg:flex gap-3">
+        <div class="hidden lg:flex gap-3">
           {navigation.buttons?.map((item) => (
             <a
               key={item?.id}
@@ -91,7 +91,7 @@ export default function Header({
               {item?.text}
             </a>
           ))}
-        </ul>
+        </div>
 
         <label
           htmlFor="mobile-drawer-nav"
@@ -138,7 +138,7 @@ export default function Header({
             ))}
           </ul>
 
-          <ul class="p-4 flex items-center gap-3">
+          <div class="p-4 flex items-center gap-3">
             {navigation.buttons?.map((item) => (
               <a
                 key={item?.id}
@@ -152,7 +152,7 @@ export default function Header({
                 {item?.text}
               </a>
             ))}
-          </ul>
+          </div>
         </div>
       </aside>
     </nav>
