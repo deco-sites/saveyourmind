@@ -66,7 +66,7 @@ function SliderItem(
       id={id}
       class="relative overflow-y-hidden w-full h-full"
     >
-      <div class="flex flex-col justify-center gap-4 rounded-lg h-full w-full">
+      <div class="flex flex-col justify-center gap-4 rounded-lg h-full w-full bg-neutral p-2">
         <Image
           src={content.image.url || ""}
           alt={content.title}
@@ -75,12 +75,14 @@ function SliderItem(
           class="object-cover h-64 rounded-lg"
         />
 
-        <div class="flex flex-col gap-2.5 h-full">
-          <span class="font-bold text-base">{content.title}</span>
+        <div class="flex flex-col justify-between gap-2.5 h-full">
+          <div class="flex flex-col gap-2.5">
+            <span class="font-bold text-base">{content.title}</span>
 
-          <p class="font-normal text-base">
-            by {content.hosts[0].fullName} • {content.audioDuration}m
-          </p>
+            <p class="font-normal text-base">
+              by {content.hosts[0].fullName} • {content.audioDuration}m
+            </p>
+          </div>
 
           <media-controller audio>
             <audio
