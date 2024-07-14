@@ -1,3 +1,5 @@
 {
-  "__resolveType": "site/loaders/user/validate-user.ts"
+  "__resolveType": "site/loaders/user/validate-user.ts",
+  "email": "yurigamers123@gmail.com",
+  "password": "123123"
 }
