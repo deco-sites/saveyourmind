@@ -3,9 +3,6 @@
   "path": "/dashboard",
   "sections": [
     {
-      "__resolveType": "Header"
-    },
-    {
       "__resolveType": "site/sections/Dashboard/Episodes.tsx",
       "title": "Featured Activities",
       "id": "episodes",
@@ -23,10 +20,6 @@
     },
     {
       "__resolveType": "Footer"
-    },
-    {
-      "__resolveType": "site/sections/Back.tsx",
-      "backTo": "/dashboard"
     }
   ],
   "seo": {
