@@ -175,7 +175,7 @@ export const loader = async (
       };
     }
 
-    if (user) redirect("/dashboard");
+    redirect("/dashboard");
   }
 
   return {
