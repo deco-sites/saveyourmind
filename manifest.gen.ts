@@ -27,6 +27,7 @@ import * as $$$$$$15 from "./sections/PersonalizedSections.tsx";
 import * as $$$$$$16 from "./sections/RegistrationForm.tsx";
 import * as $$$$$$17 from "./sections/Testimonials.tsx";
 import * as $$$$$$18 from "./sections/Theme/Theme.tsx";
+import * as $$$$$$19 from "./sections/WelcomeSection.tsx";
 
 const manifest = {
   "loaders": {
@@ -54,6 +55,7 @@ const manifest = {
     "site/sections/RegistrationForm.tsx": $$$$$$16,
     "site/sections/Testimonials.tsx": $$$$$$17,
     "site/sections/Theme/Theme.tsx": $$$$$$18,
+    "site/sections/WelcomeSection.tsx": $$$$$$19,
   },
   "actions": {
     "site/actions/user/subscribe.ts": $$$$$$$$$0,
