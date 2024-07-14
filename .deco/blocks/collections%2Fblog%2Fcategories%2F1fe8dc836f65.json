@@ -1,0 +1,8 @@
+{
+  "name": "collections/blog/categories/1fe8dc836f65",
+  "__resolveType": "blog/loaders/Category.ts",
+  "category": {
+    "name": "Meditation",
+    "slug": "meditation"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "collections/blog/authors/d7b3b55edcd2",
+  "__resolveType": "blog/loaders/Author.ts",
+  "author": {
+    "avatar": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11501/309977eb-7ca1-4921-b857-7fbdb95fee67",
+    "name": "Jack Sing",
+    "email": "jacksing@gmail.com",
+    "jobTitle": "Meditation Teacher"
+  }
+}

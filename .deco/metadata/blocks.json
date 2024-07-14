@@ -166,5 +166,17 @@
   "/.deco/blocks/Preview%20site%2Floaders%2Fpodcast%2Fget-episodes.ts.json": {
     "blockType": "loaders",
     "__resolveType": "site/loaders/podcast/get-episodes.ts"
+  },
+  "/.deco/blocks/collections%2Fblog%2Fcategories%2F1fe8dc836f65.json": {
+    "blockType": "loaders",
+    "__resolveType": "blog/loaders/Category.ts"
+  },
+  "/.deco/blocks/collections%2Fblog%2Fauthors%2Fd7b3b55edcd2.json": {
+    "blockType": "loaders",
+    "__resolveType": "blog/loaders/Author.ts"
+  },
+  "/.deco/blocks/collections%2Fblog%2Fposts%2Fcaeb9447cb28.json": {
+    "blockType": "loaders",
+    "__resolveType": "blog/loaders/Blogpost.ts"
   }
 }
