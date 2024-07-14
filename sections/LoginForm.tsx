@@ -174,6 +174,8 @@ export const loader = async (
         submissionResponse: { error: "Wrong credentials. Try again." },
       };
     }
+
+    if (user) redirect("/dashboard");
   }
 
   return {
