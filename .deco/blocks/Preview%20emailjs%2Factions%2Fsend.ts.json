@@ -1,0 +1,10 @@
+{
+  "__resolveType": "apps/emailjs/actions/send.ts",
+  "template_id": "template_t05y1qm",
+  "template_params": {
+    "name": "Yuri",
+    "subject": "Assunto",
+    "email": "killerkoll2012@gmail.com",
+    "message": "Email cadastrado"
+  }
+}

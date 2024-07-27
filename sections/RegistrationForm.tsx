@@ -1,8 +1,4 @@
-import { useSection } from "deco/hooks/useSection.ts";
-import { AppContext } from "site/apps/site.ts";
-import { User } from "site/actions/user/subscribe.ts";
-import { redirect } from "deco/mod.ts";
-import { useUser } from "site/hooks/useUser.ts";
+import RegistrationButton from "site/islands/RegistrationButton.tsx";
 
 export interface Props {
   signUpText: string;
@@ -63,13 +59,7 @@ export default function RegistrationForm(
                 </div>
               </div>
 
-              <form
-                hx-post={useSection()}
-                hx-swap="outerHTML"
-                hx-target="closest section"
-                hx-indicator="#submitButton"
-                class="mx-auto max-w-xs"
-              >
+              <div class="mx-auto max-w-xs">
                 <div class="flex items-center justify-center gap-2">
                   <input
                     class="w-1/2 px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
@@ -135,27 +125,7 @@ export default function RegistrationForm(
                     required
                   />
                 </div>
-                <button
-                  id="submitButton"
-                  type="submit"
-                  class="mt-5 tracking-wide font-semibold bg-indigo-500 text-gray-100 w-full py-4 rounded-lg hover:bg-indigo-700 transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none"
-                >
-                  <svg
-                    class="w-6 h-6 -ml-2"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
-                    <circle cx="8.5" cy="7" r="4" />
-                    <path d="M20 8v6M23 11h-6" />
-                  </svg>
-                  <span class="ml-3">
-                    Sign Up
-                  </span>
-                </button>
+                <RegistrationButton />
                 <div class="my-4 border-b text-center">
                   <div class="leading-none px-2 inline-block text-sm text-gray-600 tracking-wide font-medium bg-white transform translate-y-1/2">
                     Or{" "}
@@ -177,7 +147,7 @@ export default function RegistrationForm(
                     Privacy Policy
                   </a>
                 </p>
-              </form>
+              </div>
             </div>
           </div>
         </div>
@@ -192,49 +162,3 @@ export default function RegistrationForm(
     </div>
   );
 }
-
-export const loader = async (
-  props: Props,
-  req: Request,
-  { invoke }: AppContext,
-) => {
-  const user = useUser(null, req);
-
-  if (user) redirect("/dashboard");
-
-  const contentType = req.headers.get("Content-Type");
-
-  if (contentType === "application/x-www-form-urlencoded") {
-    const form = await req.formData();
-
-    const user: User = {
-      birthDate: form.get("birthdate")?.toString() || "",
-      email: form.get("email")?.toString() || "",
-      name: form.get("name")?.toString() || "",
-      surname: form.get("surname")?.toString() || "",
-      password: form.get("password")?.toString() || "",
-      slug: crypto.randomUUID(),
-    };
-
-    const { status } = await invoke.site.actions.user.subscribe({ user });
-
-    if (status == "400") {
-      return {
-        ...props,
-        submissionResponse: { error: "Email already exists." },
-      };
-    }
-
-    if (status == "200") {
-      return {
-        ...props,
-        submissionResponse: { error: "Please, verify your email." },
-      };
-    }
-  }
-
-  return {
-    ...props,
-    submissionResponse: null,
-  };
-};
