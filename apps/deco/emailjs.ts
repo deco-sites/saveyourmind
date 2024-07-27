@@ -1,2 +1,2 @@
-export { default } from "new-apps/emailjs/mod.ts";
-export * from "new-apps/emailjs/mod.ts";
+export { default } from "apps/emailjs/mod.ts";
+export * from "apps/emailjs/mod.ts";

@@ -1,15 +1,18 @@
 import { invoke } from "site/runtime.ts";
 
 export default function RegistrationButton() {
-  const submit = () => {
-    invoke.emailjs.actions.send({
+  const submit = async () => {
+    const response = await invoke.emailjs.actions.send({
       template_id: "template_t05y1qm",
       template_params: [
         { key: "name", value: "Yuri" },
+        { key: "subject", value: "Assunto" },
         { key: "email", value: "killerkoll2012@gmail.com" },
-        { key: "message", value: "Assunto" },
-      ]
+        { key: "message", value: "Mensagem de Teste" },
+      ],
     });
+
+    console.log(response.error);
 
     alert("Email enviado com sucesso");
   };

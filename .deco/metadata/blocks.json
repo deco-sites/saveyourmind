@@ -205,10 +205,6 @@
     "blockType": "apps",
     "__resolveType": "site/apps/deco/blog.ts"
   },
-  "/.deco/blocks/emailjs.json": {
-    "blockType": "apps",
-    "__resolveType": "decohub/apps/emailjs.ts"
-  },
   "/.deco/blocks/Preview%20emailjs%2Factions%2Fsend.ts.json": {
     "blockType": "apps",
     "__resolveType": "apps/emailjs/actions/send.ts"
@@ -216,5 +212,9 @@
   "/.deco/blocks/Preview%20htmx%2Fsections%2Fhtmx.tsx.json": {
     "blockType": "sections",
     "__resolveType": "htmx/sections/htmx.tsx"
+  },
+  "/.deco/blocks/emailjs.json": {
+    "blockType": "apps",
+    "__resolveType": "site/apps/emailjs.ts"
   }
 }
