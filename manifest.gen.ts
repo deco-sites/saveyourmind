@@ -3,8 +3,9 @@
 // This file is automatically updated during development when running `dev.ts`.
 
 import * as $$$$$$$$$0 from "./actions/user/subscribe.ts";
-import * as $$$$$$$$$$$0 from "./apps/decohub.ts";
-import * as $$$$$$$$$$$1 from "./apps/site.ts";
+import * as $$$$$$$$$$$0 from "./apps/deco/blog.ts";
+import * as $$$$$$$$$$$1 from "./apps/deco/htmx.ts";
+import * as $$$$$$$$$$$2 from "./apps/site.ts";
 import * as $$$0 from "./loaders/podcast/get-episodes.ts";
 import * as $$$1 from "./loaders/user/get-by-email.ts";
 import * as $$$2 from "./loaders/user/validate-user.ts";
@@ -63,8 +64,9 @@ const manifest = {
     "site/actions/user/subscribe.ts": $$$$$$$$$0,
   },
   "apps": {
-    "site/apps/decohub.ts": $$$$$$$$$$$0,
-    "site/apps/site.ts": $$$$$$$$$$$1,
+    "site/apps/deco/blog.ts": $$$$$$$$$$$0,
+    "site/apps/deco/htmx.ts": $$$$$$$$$$$1,
+    "site/apps/site.ts": $$$$$$$$$$$2,
   },
   "name": "site",
   "baseUrl": import.meta.url,
